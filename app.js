@@ -8,27 +8,25 @@ function loadEvents() {
 
 // delete tick function
 function deleteOrTick(e) {
-    if (e.target.className === 'delete-item') deleteTask(e);
+    if (e.target.className === 'fa fa-remove') deleteTask(e);
     else {
         tickTask(e);
     }
 }
 
-// delete task function
-function deleteTask(e) {
-    let remove = e.target.parentNode;
-    let parentNode = remove.parentNode;
-    parentNode.removeChild(remove);
-}
+
+
+
 
 // tick an individual task:
-function tickTask(e) {
-    const task = e.target.nextSibling;
-    if (e.target.checked) {
+function tickTask(e) { 
+    const task = document.querySelector('.form-check-label')
+    if (task.target.checked) {
         task.style.textDecoration = 'line-through';
         task.style.color = 'red'; // change to better color maybe ???
     } else {
         task.style.textDecoration = 'none';
+        // document.getElementsByClassName('btn-pageMenu')[0].style.display
         task.style.color = '#2f4f4f';
     }
 }
@@ -56,9 +54,8 @@ function addTask(task){
     <li class="collection-item">
                 ${task}
                 <a href="#" class="delete-item secondary-content">
-                  <i class="fa fa-remove"></i>
-    
-    `
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                <label class="form-check-label" for="inlineCheckbox1"></label>`
     ul.appendChild(li) 
-    document.querySelector('card-action').style.display = 'block'  
+    document.getElementsByClassName('card-action').style.display = 'block'  
 }

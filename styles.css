@@ -27,3 +27,25 @@ form {
 #task-title { 
     margin-top: 2em ;
 }
+
+
+li { 
+    border-bottom: 1px solid black ;  
+    padding-bottom: 35px ; 
+    padding-top: 15px ; 
+    font-size: 1.3em ; 
+    cursor: pointer; 
+}
+
+
+
+.card-action { 
+    min-width: 50% ;
+    display: block ;
+}
+
+.form-check-label { 
+    margin-left: 2em ; 
+}
+
+
