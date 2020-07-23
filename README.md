@@ -1,6 +1,5 @@
 # todo-app-v2
- * improvements over the original todo-app I made with Vanilla JS. (work in progress) 
-
+ * improvements over the original todo-app I made with Vanilla JS. 
 
 
 ## TO-DO 
@@ -15,3 +14,5 @@
   * clean up and refactor JS ✅
   * DEPLOY ! ✨ ✅
   
+## extra 
+  * add the user's TODO list to local storage so that when they refresh the browser the todo items will persist and not be cleared out. 
