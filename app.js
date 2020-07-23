@@ -3,15 +3,25 @@ loadEvents();
 function loadEvents() {
     document.querySelector('form').addEventListener('submit', submit);
     document.querySelector('a').addEventListener('click', clearList);
-    document.querySelector('form-check-label').addEventListener('click', deleteOrTick);
+    // document.querySelectorAll('form-check-label').addEventListener('click', deleteOrTick);
 }
+
+const btn = document.getElementsByClassName('.clear-item');
+btn.addEventListener('click', function (e) {
+    if (e.target.className === 'clear-item') {
+        let remove = document.querySelector('collection-item');
+        remove.remove();
+    }
+});
+
+// paragraph css selector: clear-item
 
 // delete tick
 /*  ==================
     THIS DOESN"T WORK 
     ==================*/
 function deleteOrTick(e) {
-    if (e.target.className === 'delete-item secondary-content') deleteTask(e);
+    if (e.target.className === '.clear-item') deleteTask(e);
     else {
         tickTask(e);
     }
@@ -46,10 +56,11 @@ function addTask(task) {
     const li = document.createElement('li');
     li.innerHTML = `<li class="collection-item">
                 ${task}
-                <a href="#" class="delete-item secondary-content">
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1"></label>
+                <label class="form-check-label" for="inlineCheckbox1"></label> 
                 </a> 
+                <button type="button" class="btn btn-danger clear-item">remove todo</button>
+
                 `;
 
     ul.appendChild(li);

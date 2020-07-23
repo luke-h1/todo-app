@@ -54,3 +54,15 @@ li .collection-item {
     padding: 0 5em 0 0 ; 
 }
 
+
+
+label { 
+    margin-left: 3em ; 
+}
+
+
+.clear-item { 
+    margin-top: 20px ; 
+    font-size: 0.5em ; 
+    cursor: pointer;
+}
