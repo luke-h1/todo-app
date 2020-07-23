@@ -2,37 +2,37 @@ loadEvents();
 
 function loadEvents() {
     document.querySelector('form').addEventListener('submit', submit);
-    document.getElementById('test').addEventListener('click', clearList);
-    document.querySelector('ul').addEventListener('click', deleteOrTick);
+    document.querySelector('a').addEventListener('click', clearList);
+    document.querySelector('form-check-label').addEventListener('click', deleteOrTick);
 }
 
-// delete tick function
+// delete tick
+/*  ==================
+    THIS DOESN"T WORK 
+    ==================*/
 function deleteOrTick(e) {
-    if (e.target.className === 'fa fa-remove') deleteTask(e);
+    if (e.target.className === 'delete-item secondary-content') deleteTask(e);
     else {
         tickTask(e);
     }
 }
 
-// tick an individual task:
-function tickTask(e) {
-    const task = document.querySelector('.form-check-label');
-    if (task.target.checked) {
-        task.style.textDecoration = 'line-through';
-        task.style.color = 'red'; // change to better color maybe ???
-    } else {
-        task.style.textDecoration = 'none';
-        // document.getElementsByClassName('btn-pageMenu')[0].style.display
-        task.style.color = '#2f4f4f';
-    }
+// delete task
+
+/*  ==================
+    THIS DOESN"T WORK 
+    ==================*/
+function deleteTask(e) {
+    let remove = document.querySelector('collection-item');
+    remove.remove;
 }
 
-// clear out the UL innerHTML
 function clearList(e) {
+    // this works
     const ul = (document.querySelector('ul').innerHTML = '');
 }
 
-// submit task function
+// submit task function // this works
 function submit(e) {
     e.preventDefault();
     const input = document.querySelector('input');
@@ -40,8 +40,7 @@ function submit(e) {
     input.value = ''; //clear out input value after user submits it
 }
 
-// add todo tasks
-
+// add todo tasks // this works
 function addTask(task) {
     const ul = document.querySelector('ul');
     const li = document.createElement('li');
@@ -51,9 +50,7 @@ function addTask(task) {
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
                 <label class="form-check-label" for="inlineCheckbox1"></label>
                 </a> 
-                `
-
+                `;
 
     ul.appendChild(li);
-    document.getElementsByClassName('card-action').style.display = 'block';
 }
