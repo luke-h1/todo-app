@@ -9,7 +9,8 @@
   * add event listener for X to get rid of an individual todo 
   * add eventlistener for clear all todos button ✅
   * add checkbox with tick (via bootstrap) ✅
-  * fix deleteOrTick() function ❌
-  * fix deleteTask() function ❌
-  * cleanup console errors ❌
-  * clean up and refactor JS  ❌
+  * fix deleteOrTick() function ✅
+  * fix deleteTask() function ✅
+  * cleanup console errors ✅
+  * clean up and refactor JS ✅
+  
