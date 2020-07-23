@@ -5,9 +5,6 @@ function loadEvents() {
     document.querySelector('ul').addEventListener('click', deleteOrTick);
 }
 
-
-
-
 /* 
 ====================
 THESE FUNCTIONS WORK 
@@ -18,7 +15,7 @@ function deleteOrTick(e) {
     if (e.target.className === 'btn btn-danger clear-item') {
         deleteTask(e);
     } else {
-        tickTask(e) || console.log(':( . This function didn`t work');
+        tickTask(e);
     }
 }
 
@@ -26,6 +23,28 @@ function deleteTask(e) {
     let remove = e.target.parentNode;
     let parentNode = remove.parentNode;
     parentNode.removeChild(remove);
+}
+
+// function tickTask(e) {
+//     const task = e.target.nextSibling;
+//     if (e.target.checked) {
+//         task.style.textDecoration = 'line-through';
+//         task.style.color = '#ff0000';
+//     } else {
+//         task.style.textDecoration = 'none';
+//         task.style.color = '#2f4f4f';
+//     }
+// }
+
+function tickTask(e) {
+    const todo = e.target.parentElement;
+    if (e.target.checked) {
+        todo.style.textDecoration = 'line-through';
+        todo.style.color = 'red';
+    } else {
+        todo.style.textDecoration = 'none';
+        todo.style.color = ' #2f4f4f';
+    }
 }
 
 function clearList(e) {
