@@ -5,12 +5,6 @@ function loadEvents() {
     document.querySelector('ul').addEventListener('click', deleteOrTick);
 }
 
-/* 
-====================
-THESE FUNCTIONS WORK 
-====================
-*/
-
 function deleteOrTick(e) {
     if (e.target.className === 'btn btn-danger clear-item') {
         deleteTask(e);
@@ -24,17 +18,6 @@ function deleteTask(e) {
     let parentNode = remove.parentNode;
     parentNode.removeChild(remove);
 }
-
-// function tickTask(e) {
-//     const task = e.target.nextSibling;
-//     if (e.target.checked) {
-//         task.style.textDecoration = 'line-through';
-//         task.style.color = '#ff0000';
-//     } else {
-//         task.style.textDecoration = 'none';
-//         task.style.color = '#2f4f4f';
-//     }
-// }
 
 function tickTask(e) {
     const todo = e.target.parentElement;
@@ -52,7 +35,6 @@ function clearList(e) {
     const ul = (document.querySelector('ul').innerHTML = '');
 }
 
-// submit task function
 function submit(e) {
     e.preventDefault();
     const input = document.querySelector('input');
@@ -60,7 +42,6 @@ function submit(e) {
     input.value = ''; //clear out input value after user submits it
 }
 
-// add todo tasks // this works
 function addTask(task) {
     const ul = document.querySelector('ul');
     const li = document.createElement('li');
@@ -70,8 +51,6 @@ function addTask(task) {
                 <label class="form-check-label" for="inlineCheckbox1"></label> 
                 </a> 
                 <button type="button" class="btn btn-danger clear-item">remove todo</button>
-
                 `;
-
     ul.appendChild(li);
 }

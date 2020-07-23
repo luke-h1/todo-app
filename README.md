@@ -13,4 +13,3 @@
   * fix deleteTask() function ❌
   * cleanup console errors ❌
   * clean up and refactor JS  ❌
-  
