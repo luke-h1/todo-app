@@ -3,7 +3,11 @@
 
 
 
-## TO-DO 
+
+
+## TO-DO  
+  * fix the tick issues where it only selects one tick (the top one). Likely an issue with tickTask function. 
+  * fix weird concatenation of borders when collapsing todos 
   * bring in bootstrap ✅
   * rename classes / IDs for JS section ✅
   * add event listener for X to get rid of an individual todo 

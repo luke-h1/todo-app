@@ -31,15 +31,19 @@ function tickTask(e) {
 }
 
 function clearList(e) {
-    // this works
-    const ul = (document.querySelector('ul').innerHTML = '');
+    const ul = document.querySelector('ul');
+    ul.innerHTML = '';
 }
 
 function submit(e) {
     e.preventDefault();
     const input = document.querySelector('input');
-    if (input.value != '') addTask(input.value); // as long as the user enters something, then submit it.
-    input.value = ''; //clear out input value after user submits it
+    if (input.value != '') {
+        addTask(input.value); // as long as the user enters something, then submit it. else don't
+        input.value = ''; //clear out input value after user submits it
+    } else {
+        window.alert('enter a valid value');
+    }
 }
 
 function addTask(task) {
@@ -53,4 +57,9 @@ function addTask(task) {
                 <button type="button" class="btn btn-danger clear-item">remove todo</button>
                 `;
     ul.appendChild(li);
+    document.querySelector('card-collections').style.display = 'block';
+
+
 }
+
+console.log('🚀 https://github.com/luke-h1/todo-app-v2 🚀');
