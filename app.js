@@ -5,26 +5,6 @@ function loadEvents() {
     document.querySelector('ul').addEventListener('click', deleteOrTick);
 }
 
-/* 
-====================
-THESE FUNCTIONS don't WORK 
-====================
-*/
-function deleteOrTick(e) {
-    if (e.target.className === 'btn btn-danger clear-item') {
-        deleteTask(e);
-    } else {
-        // tickTask(e);
-        console.log(':(')
-    }
-}
-
-function deleteTask(e) {
-    let remove = e.target.parentNode;
-    let parentNode = remove.parentNode;
-    parentNode.removeChild(remove);
-}
-
 
 
 
@@ -33,6 +13,20 @@ function deleteTask(e) {
 THESE FUNCTIONS WORK 
 ====================
 */
+
+function deleteOrTick(e) {
+    if (e.target.className === 'btn btn-danger clear-item') {
+        deleteTask(e);
+    } else {
+        tickTask(e) || console.log(':( . This function didn`t work');
+    }
+}
+
+function deleteTask(e) {
+    let remove = e.target.parentNode;
+    let parentNode = remove.parentNode;
+    parentNode.removeChild(remove);
+}
 
 function clearList(e) {
     // this works
