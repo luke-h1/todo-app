@@ -34,9 +34,15 @@ li {
     padding-bottom: 35px ; 
     padding-top: 15px ; 
     font-size: 1.3em ; 
-    cursor: pointer; 
 }
 
+li .collection-item { 
+    padding: 0 2em 0 2em ; 
+}
+
+.delete { 
+    width: 10% ; 
+}
 
 
 .card-action { 
@@ -45,7 +51,6 @@ li {
 }
 
 .form-check-label { 
-    margin-left: 2em ; 
+    padding: 0 5em 0 0 ; 
 }
-
 
