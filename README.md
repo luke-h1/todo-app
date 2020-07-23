@@ -2,9 +2,6 @@
  * improvements over the original todo-app I made with Vanilla JS. (work in progress) 
 
 
-## website 
- * https://todo-app-v2.vercel.app 
-
 
 ## TO-DO 
   * bring in bootstrap ✅
