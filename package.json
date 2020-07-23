@@ -1,0 +1,23 @@
+{
+  "name": "todo-app-v2",
+  "version": "1.0.0",
+  "description": "* improvements over the original todo-app I made with Vanilla JS. ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luke-h1/todo-app-v2.git"
+  },
+  "keywords": [],
+  "author": "luke-h1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luke-h1/todo-app-v2/issues"
+  },
+  "homepage": "https://github.com/luke-h1/todo-app-v2#readme",
+  "devDependencies": {
+    "eslint": "^7.5.0"
+  }
+}
