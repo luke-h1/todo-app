@@ -1,48 +1,45 @@
 loadEvents();
-
 function loadEvents() {
     document.querySelector('form').addEventListener('submit', submit);
     document.querySelector('a').addEventListener('click', clearList);
-    // document.querySelectorAll('form-check-label').addEventListener('click', deleteOrTick);
+    document.querySelector('ul').addEventListener('click', deleteOrTick);
 }
 
-const btn = document.getElementsByClassName('.clear-item');
-btn.addEventListener('click', function (e) {
-    if (e.target.className === 'clear-item') {
-        let remove = document.querySelector('collection-item');
-        remove.remove();
-    }
-});
-
-// paragraph css selector: clear-item
-
-// delete tick
-/*  ==================
-    THIS DOESN"T WORK 
-    ==================*/
+/* 
+====================
+THESE FUNCTIONS don't WORK 
+====================
+*/
 function deleteOrTick(e) {
-    if (e.target.className === '.clear-item') deleteTask(e);
-    else {
-        tickTask(e);
+    if (e.target.className === 'btn btn-danger clear-item') {
+        deleteTask(e);
+    } else {
+        // tickTask(e);
+        console.log(':(')
     }
 }
 
-// delete task
-
-/*  ==================
-    THIS DOESN"T WORK 
-    ==================*/
 function deleteTask(e) {
-    let remove = document.querySelector('collection-item');
-    remove.remove;
+    let remove = e.target.parentNode;
+    let parentNode = remove.parentNode;
+    parentNode.removeChild(remove);
 }
+
+
+
+
+/* 
+====================
+THESE FUNCTIONS WORK 
+====================
+*/
 
 function clearList(e) {
     // this works
     const ul = (document.querySelector('ul').innerHTML = '');
 }
 
-// submit task function // this works
+// submit task function
 function submit(e) {
     e.preventDefault();
     const input = document.querySelector('input');
