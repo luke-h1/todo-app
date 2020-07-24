@@ -43,7 +43,6 @@ li .collection-item {
 .delete { 
     width: 10% ; 
 }
-
 /* 
 .card-action { 
     min-width: 50% ;
@@ -54,6 +53,10 @@ li .collection-item {
     padding: 0 5em 0 0 ; 
 }
 
+form-check-input { 
+    font-size: 20px ; 
+    color: #000 ; 
+}
 
 
 label { 
@@ -66,8 +69,8 @@ label {
     font-size: 0.5em ; 
     cursor: pointer;
 }
-.btn,
-.btn-danger,
-.clear-item { 
+
+
+.btn { 
     margin-left: 2em ; 
 }
