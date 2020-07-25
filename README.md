@@ -4,7 +4,7 @@
 
 ## TO-DO 
   * fix weird CSS concatenation bug 
-  * fix issue where user can only tick the first todo and not the ones below it (issue with tick function) 
+  * fix addTask function issue
   * bring in bootstrap ✅
   * rename classes / IDs for JS section ✅
   * add event listener for X to get rid of an individual todo 
