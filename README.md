@@ -3,8 +3,8 @@
 
 
 ## TO-DO 
-  * fix weird CSS concatenation bug 
-  * fix addTask function issue
+  * fix weird CSS concatenation bug ❌
+  * fix addTask function issue ❌ 
   * bring in bootstrap ✅
   * rename classes / IDs for JS section ✅
   * add event listener for X to get rid of an individual todo 
@@ -16,4 +16,4 @@
   * clean up and refactor JS ✅
   
 ## extra 
-  * add the user's TODO list to local storage so that when they refresh the browser the todo items will persist and not be cleared out. 
+  * add the user's TODO list to local storage so that when they refresh the browser the todo items will persist and not be           cleared out. 
